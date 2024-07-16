@@ -1,0 +1,32 @@
+<section id="viewpost">
+<h2>{{post.title}}</h2>
+<p>{{post.content}}</p>
+<small>Posted by {{post.user.username}} on {{post.createdAt}}</small>
+
+
+
+<form id="comment-form">
+    <textarea name="content" placeholder="Add a comment..." required></textarea>
+    <input type="hidden" name="postId" value="{{post.id}}">
+    <input type="hidden" name="userId" value="{{session.userId}}">
+    
+    <button type="submit" id="com-sub">Comment</button>
+</form>
+
+{{#if post.comments}}
+    <h4>Comments:</h4>
+    <ul>
+        {{#each post.comments}}
+            <li>
+                <strong>{{this.user.username}}:</strong> {{this.content}}
+                <br>
+                <small>Posted on {{this.createdAt}}</small>
+            </li>
+        {{/each}}
+    </ul>
+
+{{else}}
+    <p>No comments yet.</p>
+{{/if}}
+</section>
+<script src="../js/comment.js"></script>

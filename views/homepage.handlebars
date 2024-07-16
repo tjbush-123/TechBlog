@@ -1,0 +1,11 @@
+<!-- Loop over each object in the projects array -->
+{{#each posts}}
+    <div class="post">
+        <h2>{{this.title}}</h2>
+        <p>{{this.content}}</p>
+        <small>Posted by {{this.user.username}} on {{this.createdAt}}</small>
+    </div>
+    <button><a href="/viewpost/{{this.id}}">VIEW</a></button>
+{{else}}
+    <p>No posts found.</p>
+{{/each}}

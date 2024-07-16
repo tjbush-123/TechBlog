@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS chronicle_db;
+CREATE DATABASE chronicle_db;

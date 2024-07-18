@@ -1,2 +1,2 @@
-DROP DATABASE IF EXISTS chronicle_db;
-CREATE DATABASE chronicle_db;
+DROP DATABASE IF EXISTS techblog_db;
+CREATE DATABASE techblog_db;
